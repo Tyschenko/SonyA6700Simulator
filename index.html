@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Learn manual photography on the Sony A6700 — an interactive exposure simulator, scene presets, condition guides, lens advice and a cheat sheet.">
+<title>A6700 Field Guide — Learn Your Camera</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23121110'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23f0a020' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23f0a020'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="top">
+  <a href="#top" class="brand" aria-label="A6700 Field Guide home">
+    <svg class="brand-mark" width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+      <rect x="1.5" y="1.5" width="37" height="37" rx="9" stroke="currentColor" stroke-width="2.2"/>
+      <circle cx="20" cy="20" r="10" stroke="currentColor" stroke-width="2.2"/>
+      <circle cx="20" cy="20" r="3.6" fill="currentColor"/>
+      <circle cx="31" cy="9" r="2" fill="currentColor"/>
+    </svg>
+    <span class="brand-text">A6700 <em>Field Guide</em></span>
+  </a>
+  <nav class="top-nav" aria-label="Primary">
+    <a href="#simulator">Simulator</a>
+    <a href="#scenes">Scenes</a>
+    <a href="#conditions">Guides</a>
+    <a href="#lenses">Lenses</a>
+    <a href="#cheatsheet">Cheat Sheet</a>
+  </nav>
+  <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode"></button>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">Sony α6700 · Manual photography, made intuitive</span>
+    <h1>Stop guessing.<br>Start <span class="accent">seeing</span> your settings.</h1>
+    <p class="lede">Drag three dials — aperture, shutter, ISO — and watch a real photo change in front of you. Then learn exactly <em>why</em> with plain-language hints, ready-made scene recipes, condition guides and a printable cheat sheet built for your kit.</p>
+    <div class="hero-cta">
+      <a href="#simulator" class="btn btn-primary">Try the simulator</a>
+      <a href="#conditions" class="btn btn-ghost">Jump to a guide</a>
+    </div>
+    <ul class="hero-stats" role="list">
+      <li><strong>3</strong><span>dials to master</span></li>
+      <li><strong>6</strong><span>live scenes</span></li>
+      <li><strong>3</strong><span>of your lenses</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== EXPOSURE TRIANGLE PRIMER ===== -->
+<section class="band" id="primer">
+  <div class="container">
+    <p class="kicker">The foundation</p>
+    <h2>Every photo is a balance of three things</h2>
+    <p class="section-lede">These three controls together set how bright your photo is — change one, and you usually need to compensate with another. Each one also has a creative <em>side effect</em>. That side effect is the whole game.</p>
+    <div class="triangle-grid">
+      <article class="tri-card" style="--c: var(--c-aperture)">
+        <span class="tri-icon">◎</span>
+        <h3>Aperture <span class="tri-unit">(f-number)</span></h3>
+        <p class="tri-what">How wide the lens opening is. Lower f-number = wider opening = more light.</p>
+        <p class="tri-effect"><strong>Side effect — depth of field.</strong> Low f (f/3.5) blurs the background beautifully. High f (f/11) keeps everything sharp front to back.</p>
+      </article>
+      <article class="tri-card" style="--c: var(--c-shutter)">
+        <span class="tri-icon">⧗</span>
+        <h3>Shutter speed</h3>
+        <p class="tri-what">How long the sensor is exposed. 1/2000s is a blink; 1/30s is slow.</p>
+        <p class="tri-effect"><strong>Side effect — motion.</strong> Fast shutter freezes action. Slow shutter lets moving things blur (and risks camera shake).</p>
+      </article>
+      <article class="tri-card" style="--c: var(--c-iso)">
+        <span class="tri-icon">◈</span>
+        <h3>ISO</h3>
+        <p class="tri-what">How much the camera amplifies the signal. Higher ISO = brighter image without changing aperture or shutter.</p>
+        <p class="tri-effect"><strong>Side effect — noise.</strong> Low ISO (100) is cleanest. High ISO (6400+) brightens dark scenes but adds grain.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SIMULATOR ===== -->
+<section class="band band-alt" id="simulator">
+  <div class="container">
+    <p class="kicker">Interactive</p>
+    <h2>The exposure simulator</h2>
+    <p class="section-lede">Pick a scene, then drag the dials. The preview reacts the way your A6700 actually would — brightness, background blur, motion blur and grain all change live. Watch the coaching panel for what to fix.</p>
+
+    <!-- scene chooser -->
+    <div class="scene-chooser" role="tablist" aria-label="Choose a scene">
+      <button class="scene-chip is-active" data-scene="portrait" role="tab" aria-selected="true">Portrait</button>
+      <button class="scene-chip" data-scene="landscape" role="tab" aria-selected="false">Nature / Landscape</button>
+      <button class="scene-chip" data-scene="wildlife" role="tab" aria-selected="false">Animal / Wildlife</button>
+      <button class="scene-chip" data-scene="macro" role="tab" aria-selected="false">Close-up / Macro</button>
+      <button class="scene-chip" data-scene="sports" role="tab" aria-selected="false">Sports / Action</button>
+      <button class="scene-chip" data-scene="night" role="tab" aria-selected="false">Low light / Night</button>
+    </div>
+
+    <div class="sim-layout">
+      <!-- preview -->
+      <div class="sim-preview">
+        <div class="preview-frame">
+          <canvas id="previewCanvas" width="880" height="660" aria-label="Live photo preview reacting to your settings"></canvas>
+          <!-- viewfinder overlay -->
+          <div class="vf-overlay" aria-hidden="true">
+            <span class="vf-corner tl"></span><span class="vf-corner tr"></span>
+            <span class="vf-corner bl"></span><span class="vf-corner br"></span>
+            <div class="vf-readout">
+              <span id="vfAperture">f/3.5</span>
+              <span id="vfShutter">1/250</span>
+              <span id="vfIso">ISO 100</span>
+              <span id="vfEv" class="vf-ev">±0.0 EV</span>
+            </div>
+            <div class="vf-rec"><span class="vf-dot"></span><span id="vfScene">PORTRAIT</span></div>
+          </div>
+        </div>
+        <!-- exposure meter -->
+        <div class="meter">
+          <span class="meter-label">Exposure</span>
+          <div class="meter-track" aria-hidden="true">
+            <span class="meter-ticks"></span>
+            <span class="meter-needle" id="meterNeedle"></span>
+            <span class="meter-zero"></span>
+          </div>
+          <div class="meter-scale" aria-hidden="true"><span>−3</span><span>−2</span><span>−1</span><span>0</span><span>+1</span><span>+2</span><span>+3</span></div>
+        </div>
+      </div>
+
+      <!-- controls -->
+      <div class="sim-controls">
+        <div class="control" data-control="aperture">
+          <div class="control-head">
+            <label for="apertureSlider">Aperture</label>
+            <output id="apertureValue" class="control-val">f/3.5</output>
+          </div>
+          <input type="range" id="apertureSlider" min="0" max="9" step="1" value="0" aria-describedby="apertureHint">
+          <div class="control-scale"><span>Wide · more light · blur</span><span>Narrow · sharp all</span></div>
+          <p class="control-hint" id="apertureHint">Widest opening on your kit lenses. Maximum background blur.</p>
+        </div>
+
+        <div class="control" data-control="shutter">
+          <div class="control-head">
+            <label for="shutterSlider">Shutter speed</label>
+            <output id="shutterValue" class="control-val">1/250</output>
+          </div>
+          <input type="range" id="shutterSlider" min="0" max="12" step="1" value="6" aria-describedby="shutterHint">
+          <div class="control-scale"><span>Slow · more light · blur</span><span>Fast · freeze</span></div>
+          <p class="control-hint" id="shutterHint">Safe handheld speed. Freezes most everyday motion.</p>
+        </div>
+
+        <div class="control" data-control="iso">
+          <div class="control-head">
+            <label for="isoSlider">ISO</label>
+            <output id="isoValue" class="control-val">100</output>
+          </div>
+          <input type="range" id="isoSlider" min="0" max="9" step="1" value="0" aria-describedby="isoHint">
+          <div class="control-scale"><span>Low · clean</span><span>High · bright · grain</span></div>
+          <p class="control-hint" id="isoHint">Base ISO — the cleanest your sensor gets.</p>
+        </div>
+
+        <button class="btn btn-reset" id="resetBtn" type="button">↺ Reset to recommended</button>
+      </div>
+    </div>
+
+    <!-- coaching -->
+    <div class="coach" id="coach">
+      <div class="coach-status" id="coachStatus">
+        <span class="coach-badge" id="coachBadge">Well exposed</span>
+        <h3 id="coachTitle">Nicely balanced</h3>
+      </div>
+      <p id="coachBody">Your settings give a correct exposure for this scene. Read the dial hints to see the creative trade-offs you've chosen.</p>
+      <ul class="coach-tips" id="coachTips"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCENE PRESETS ===== -->
+<section class="band" id="scenes">
+  <div class="container">
+    <p class="kicker">Recipes</p>
+    <h2>Scene presets for your kit</h2>
+    <p class="section-lede">Solid starting points for each subject, chosen for the real apertures your three Sony lenses offer. Tap <em>Load in simulator</em> to feel how the recipe behaves, then adjust to taste.</p>
+    <div class="preset-grid" id="presetGrid"></div>
+  </div>
+</section>
+
+<!-- ===== CONDITION GUIDES ===== -->
+<section class="band band-alt" id="conditions">
+  <div class="container">
+    <p class="kicker">Field guides</p>
+    <h2>What to do in tricky conditions</h2>
+    <p class="section-lede">Real situations, the settings to start from, and the reasoning — the X, Y and Z behind every choice — so the logic sticks.</p>
+    <div class="guide-list" id="guideList"></div>
+  </div>
+</section>
+
+<!-- ===== LENSES ===== -->
+<section class="band" id="lenses">
+  <div class="container">
+    <p class="kicker">Glass</p>
+    <h2>Which of your three lenses to reach for</h2>
+    <p class="section-lede">You own a wide-to-normal kit zoom, a versatile travel zoom and a long telephoto. Here's when each one shines — and the equivalent reach on your APS-C sensor (multiply focal length by 1.5).</p>
+    <div class="lens-grid" id="lensGrid"></div>
+    <div class="lens-note">
+      <strong>One thing to remember about your kit:</strong> none of these are bright f/1.8 primes — they're variable-aperture zooms (f/3.5–6.3). That means in dim light you'll lean on higher ISO and slower shutter speeds rather than opening the aperture wide. The simulator's apertures reflect exactly what your lenses can do.
+    </div>
+  </div>
+</section>
+
+<!-- ===== CHEAT SHEET ===== -->
+<section class="band band-alt" id="cheatsheet">
+  <div class="container">
+    <p class="kicker">Quick reference</p>
+    <h2>The cheat sheet</h2>
+    <p class="section-lede">Screenshot this for the field. Everything you need at a glance.</p>
+
+    <div class="cheat-block">
+      <h3>The exposure trade-offs</h3>
+      <div class="table-wrap">
+        <table class="cheat-table">
+          <thead><tr><th>Dial</th><th>Lower / Slower / Less</th><th>Higher / Faster / More</th><th>Creative effect</th></tr></thead>
+          <tbody>
+            <tr><td class="td-key" data-c="aperture">Aperture</td><td>f/3.5 — wide, more light</td><td>f/11 — narrow, less light</td><td>Background blur ↔ everything sharp</td></tr>
+            <tr><td class="td-key" data-c="shutter">Shutter</td><td>1/30 — slow, more light</td><td>1/2000 — fast, less light</td><td>Motion blur ↔ frozen action</td></tr>
+            <tr><td class="td-key" data-c="iso">ISO</td><td>100 — clean</td><td>6400 — grainy</td><td>Clean file ↔ usable in the dark</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="cheat-block">
+      <h3>Starting points by subject</h3>
+      <div class="table-wrap">
+        <table class="cheat-table" id="cheatSubjectTable">
+          <thead><tr><th>Subject</th><th>Mode</th><th>Aperture</th><th>Shutter</th><th>ISO</th><th>Lens</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="cheat-block">
+      <h3>If your photo looks wrong — fix it fast</h3>
+      <div class="fix-grid">
+        <div class="fix-card"><span class="fix-tag fix-dark">Too dark</span><p>Slow the shutter, open the aperture (lower f), or raise ISO. Try ISO first if motion or depth matters.</p></div>
+        <div class="fix-card"><span class="fix-tag fix-bright">Too bright</span><p>Speed up the shutter, close the aperture (higher f), or lower ISO. Lower ISO first to keep it clean.</p></div>
+        <div class="fix-card"><span class="fix-tag fix-blur">Subject blurry</span><p>Shutter too slow for the movement. Raise it to 1/250+ (1/1000+ for sports), then raise ISO to keep brightness.</p></div>
+        <div class="fix-card"><span class="fix-tag fix-noise">Too grainy</span><p>ISO too high. Lower it, then recover brightness with a slower shutter (on a tripod) or wider aperture.</p></div>
+        <div class="fix-card"><span class="fix-tag fix-flat">No background blur</span><p>Use a lower f-number, get closer to your subject, zoom in longer, and move the subject away from the background.</p></div>
+        <div class="fix-card"><span class="fix-tag fix-soft">Not sharp enough</span><p>Stop down to f/8 for landscapes; check focus is on the eyes for portraits; raise shutter to beat camera shake.</p></div>
+      </div>
+    </div>
+
+    <div class="cheat-block">
+      <h3>A6700 menu settings worth setting once</h3>
+      <ul class="settings-list">
+        <li><strong>Auto ISO range:</strong> set min 100, max 6400 (push to 12800 only when desperate). Keeps grain in check.</li>
+        <li><strong>Auto ISO min shutter:</strong> "Standard" for everyday; "Faster" for wildlife &amp; sports so the camera prioritises freezing motion.</li>
+        <li><strong>Drive mode:</strong> Continuous Mid/High for action and wildlife bursts; Single for landscapes.</li>
+        <li><strong>Subject recognition AF:</strong> On — set to Human for portraits, Animal/Bird for wildlife.</li>
+        <li><strong>File format:</strong> RAW (or HEIF) gives you the most room to fix exposure later while learning.</li>
+        <li><strong>Exposure compensation dial:</strong> nudge − for bright snowy/beach scenes, + for dark subjects the meter wants to brighten.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>Built as a personal learning companion for the Sony α6700. Settings are starting points — light changes everything, so trust the live preview in your viewfinder and experiment freely.</p>
+  <p class="footer-meta">Specs verified against Sony's official α6700 documentation · Native ISO 100–32000 · Shutter 1/4000 (mech) – 30s · IBIS 5-axis</p>
+  <a href="#top" class="footer-top">Back to top ↑</a>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
